@@ -1,0 +1,39 @@
+header{
+    text-align: center;
+    position: relative;
+    
+}
+.helpLangContainer{
+    position: absolute;
+    top:1em;
+    right: 1em; 
+}
+#language{
+    width: 2em;
+    height: 2em;
+    background-image: url("https://image.freepik.com/free-vector/grunge-union-jack-background_1048-1167.jpg");
+    background-size: 100%
+}
+
+.buttonContainer{
+    text-align: center;
+    margin-top: 8em;
+    margin-bottom: 20em;
+    width: 100%;
+}   
+
+.chooseDrinkTypeButton{
+    display: inline-block;
+    margin: 0px 25px 0px 25px;
+}
+
+
+.chooseDrinkTypeButton button{
+    height: 10em;
+    width: 10em;
+}
+
+footer {
+    /*hej*/
+    text-align: center;
+}
