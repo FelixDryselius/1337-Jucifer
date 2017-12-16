@@ -27,9 +27,11 @@ function createButton(buttonName) {
 
 
 function pressedOHJuicesInOrder(){
-    typeTextToDiv('1 x L Applejuice', 'oHJuicesInOrder');
-    
+    // typeTextToDiv('1 x L Applejuice', 'oHJuicesInOrder');
+   document.getElementById("oHIngridients").classList.toggle("hide");
+   document.getElementById("oHJuicesInOrder").classList.toggle("pressedJucesInTheOrder"); 
 }
+
 
 function typeTextToDiv(text, div_id) {
     var aVariable = document.getElementById(div_id);
@@ -38,6 +40,10 @@ function typeTextToDiv(text, div_id) {
 
 function putDivIntoDiv(){
 
+}
+
+function pressedButton(){
+    document.getElementById("oHIngridients").classList.toggle("hide");
 }
 
 /* TEST FÖR JQUERY; TOGGLE -Ingrid

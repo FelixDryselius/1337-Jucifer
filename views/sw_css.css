@@ -52,13 +52,14 @@ div.menu button {
 
 /* Change background color of buttons on hover */
 div.menu button:hover {
-    background-color: #ddd;
+    /*background-color: #ddd;*/
     font-weight: bold;
 }
 
 /* Create an active/current tablink class */
+    /*DENNA GÖR INGET VA?*/
 div.menu button.active {
-    background-color: #ccc;
+    /*background-color: #ccc;*/
     font-weight: bold;
 }
 
@@ -71,12 +72,14 @@ div.menu button.active {
 }
 
 h3{
-    font: bold; 
+    /*font: bold; */
+    text-align:center;
 }
 
 h4{
-
+    
 }
+
 
 /*SLUT KOD SOM RÖR ALLT*/
 
@@ -84,6 +87,7 @@ h4{
 /*Slut NEW ORDER*/
 
 /*Start css för ORDER QUEUE*/
+
 /*Slut ORDER QUEUE*/
 
 /*Start css för ORDER HISTORY*/
@@ -115,6 +119,8 @@ h4{
     background-color: rgb(185,184,197);
     border: 2px solid rgb(125,124,127);
 }
+
+
             
 #oHIngridients{}
 
@@ -127,13 +133,18 @@ h4{
     border: 2px solid rgb(125,124,127);
 }
 
+.pressedJucesInTheOrder{
+    filter: brightness(85%);
+}
+
 
 #oHTimeInfo{
-    position: absolute;
+    position: relative;
     width: 30%;
-    height:25vh;
-    left: 35%;
-    bottom: 10px;
+    height: 25vh;
+    /*left: 35%;*/
+    margin: auto;
+    top: 400px;
     background-color: rgb(210,210,210);
     border: 2px solid rgb(125,124,127);
 }
@@ -142,8 +153,8 @@ h4{
     position: relative;
     width: 90%;
     height: 10vh;
-    left: 5px;
-    margin: 7px;
+    margin: 7px auto;
+    top: 13px;
     background-color: rgb(210,210,210);
     border: 2px solid rgb(125,124,127);
 }
@@ -158,3 +169,7 @@ h4{
 
 /*Start css för STATISTICS*/
 /*Slut STATISTICS*/
+
+.hide{
+    display: none;
+}
