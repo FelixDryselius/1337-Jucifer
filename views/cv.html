@@ -74,7 +74,8 @@
                 <div class="topBarButton" v-if="showTopBarButton">
                     <button id="makeDrinkButton" type="button" v-on:click="showTab('ingredPage')">Skapa dryck</button>
                     <button id="cartButton" type="button" v-on:click="showTab('cartPage')">Varukorg</button>
-                    <button id="payButton" type="button">Betalning</button>
+                    <button id="payButtonGreen" type="button" v-if="showCartPage">Betalning</button>
+                    <button id="payButton" type="button" v-else>Betalning</button>
                 </div>
             </div>  
             <!--End of topbar-->
@@ -246,7 +247,7 @@ document.getElementById('fade').style.display='block'">
 
             <!--Start of cart page-->
             <div id="cart" v-if="showCartPage">
-                <h1 class="header" align="left">Varukorg</h1>
+                <h1 class="header" align="left">Varukorg</h1>     
                 <div class="mainContent">
 
                     <div class="cartOverviewBox">

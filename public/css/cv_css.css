@@ -149,6 +149,8 @@ button {
     display: inline-block;
 }
 .topBarButton button{
+    background-color: lightgrey;
+    color: black;
     height: 2em;
     width: 10em;
 }
@@ -232,7 +234,7 @@ button {
     height: 0; 
     position: relative;
     border-right: 0.6em solid transparent;
-    border-top: 3em solid lightGray;
+    border-top: 3em solid lightgrey;
     border-left: 0.6em solid transparent;
     box-sizing: content-box;
     border-radius: 6px;
@@ -251,7 +253,7 @@ button {
     min-width: 15em;
     margin-bottom: 1.5em;
     box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.3) inset;
-    background-color: lightgray;
+    background-color: lightgrey;
 }
 
 #ingred5 {
@@ -287,7 +289,7 @@ button {
 #baseIngred {
     width: 8.5em;
     border-right: 1.2em solid transparent;
-    border-top: 6.8em solid lightGray;
+    border-top: 6.8em solid lightgrey;
     border-left: 1.2em solid transparent;
 }
 
@@ -315,7 +317,6 @@ button {
     height: 90vh;
     flex-direction: row;
     justify-content: space-between;
-    border: 1px solid #ccc; /*Skall tas bort när sidan fungerar*/
     /*    overflow: hidden;*/
 }
 .cartOverviewBox{
@@ -323,17 +324,27 @@ button {
     flex-direction: row;
     flex-wrap: wrap;
     padding: 10px;
-    border: 1px solid;
+    border-style: solid;
+    border-width: 1em;
+    border-radius: 6px;
+    border-color: #F9C80E;
     overflow: auto;
     align-self: stretch;
 }
 .cartRecipeBox{
     flex: 2;
     padding: 10px;
+    border-style: solid;
+    border-width: 1em;
+    border-radius: 6px;
+    border-color: #F9C80E;
     align-content: center;
-    border: 1px solid;
     overflow: auto;
     align-self: stretch;
+}
+
+#payButtonGreen {
+    background-color: #6EEB83;
 }
 /* cv_cart_page slutar*/
 
