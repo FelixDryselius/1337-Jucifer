@@ -318,6 +318,7 @@ button {
 
 .headContainer{
     display: flex; 
+    justify-content: space-evenly;
     width: 70%;
     flex-direction: row;
     border-left-style: solid;
@@ -331,15 +332,13 @@ button {
 
 .head {
     text-align: left;
-    text-indent: 13%;
-    flex: 3;
-    font-size: 1.5em;
+    font-size: 2em;
     text-transform: capitalize;
 }
 
 input.head {
-    flex: 1;
     text-align: left;
+    max-width: 9em;
 }
 
 .flexContainer {
