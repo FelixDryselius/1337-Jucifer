@@ -2,31 +2,26 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*Start på css för start page*/
+
+html {
+    font-family: 'Lato', sans-serif;
+}
+
+html button {
+    font-family: 'Lato', sans-serif;
+}
+
 .header{
     text-align: center;
     position: relative;
-
+    font-size: 3em;
 }
 .subHeader {
     text-align: center;
     position: relative;
+    margin-top: 2.5em;
+    font-size: 2em;
 }
 
 .helpLangContainer {
@@ -45,6 +40,10 @@
     top:1em;
     right: 1em; 
     width: 13vw;
+}
+
+#abort {
+    background-color: #EA3546;
 }
 
 #langButton{
@@ -102,19 +101,30 @@
 
 .startPageButtonContainer{
     text-align: center;
-    margin-top: 8em;
-    margin-bottom: 12em;
+    margin-top: 3.5em;
+    margin-bottom: 9em;
     width: 100%;
 }   
 
-.chooseDrinkTypeButton{
+button {
+    background-color: #49c0f0;
+    color: #E6EAEF;
+    border-radius: 6px;
+    border-width: 0;
+    box-shadow: 0 -2px 0 0 rgba(0, 0, 0, 0.3) inset;
+}
+
+.largeButton{
     display: inline-block;
     margin: 0px 25px 0px 25px;
 }
 
-.chooseDrinkTypeButton button{
-    height: 10em;
-    width: 10em;
+.largeButton button{
+    display: inline-block;
+    margin: 0.5em;
+    padding: 1.2em 1.6em;
+    font-size: 1.6em;
+    width: 7em;
 }
 
 .footer {
@@ -149,6 +159,10 @@
 /*cv_add_drink_page slutar*/
 /* Start på css for choose size page*/
 
+#size main {
+    margin-top: 5em;
+}
+
 .chooseSize {
     text-align: center;
     padding-top: 4em;
@@ -176,24 +190,21 @@
 
 
 .mainContent {
-    border-style: solid;
     display: flex;
     align-content: center;
-    height: 80vh;
+    height: 65vh;
     justify-content: flex-end;
     align-items: center;
 }
 
-
 .mugContainer {
-    border-style: solid;
     display: flex;
     margin-right: 3em;
 }
 
-.mug{
-    height: 368px;
-    width: 250px;
+.mug {
+    height: 23em;
+    width: 15.625em;
     background-image: url(/images/mug.jpg);
     background-size: contain;
     background-repeat: no-repeat;
@@ -211,22 +222,68 @@
 .mugButtons{
     flex: 3;
     display: flex;
-    flex-flow: column;
     align-items: center;
     justify-content: space-around;
+    flex-direction: column;
 }
 
-.mugButtons button{
-    align-self: center;
-    flex-basis: 2em;
-    min-width: 10em;
+.ingredButton {
+    text-align: center;
+    height: 0; 
+    position: relative;
+    border-right: 0.6em solid transparent;
+    border-top: 3em solid lightGray;
+    border-left: 0.6em solid transparent;
+    box-sizing: content-box;
+    border-radius: 6px;
+    margin-bottom: 0.2em;
 }
 
 #topping {
+    color: black;
+    font-size: 1em;
     align-self: center;
-    flex-basis: 2em;
-    min-width: 13em;
+    flex-basis: 3.25em;
+    min-width: 15em;
+    margin-bottom: 1.5em;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.3) inset;
+    background-color: lightgray;
 }
+
+#ingred3 {
+    width: 13.5em;
+}
+
+#ingred2 {
+    width: 12.2em;
+    left: 4.25%;
+}
+
+#ingred1 {
+    width: 11em;
+    margin-bottom: -0.2em;
+    left: 8.4%;
+}
+
+#baseIngred {
+    width: 8.5em;
+    border-right: 1.2em solid transparent;
+    border-top: 6.8em solid lightGray;
+    border-left: 1.2em solid transparent;
+}
+
+.mugButtons span { 
+    position: absolute;
+    top: -4em;
+    left: 36%;
+    color: black;
+}
+
+.ingred span { 
+    top: -2.5em;
+    left: 28%;
+}
+
 /*End css for smoothie choose ingredients */
 /* cv_cart_page börjar*/
 .cartBox{
@@ -260,42 +317,52 @@
 /* cv_base_ingred börjar*/
 
 .headContainer{
-    display: flex;  
+    display: flex; 
     width: 70%;
     flex-direction: row;
-   
+    border-left-style: solid;
+    border-right-style: solid;
+    border-top-style: solid;
+    border-width: 1em;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-color: #F9C80E;
 }
 
 .head {
-    border-style: solid;
-    text-align: center;
-    flex: 3 ;
-    font-size: 1.5em;
-    
-}
-input.head {
-    flex: 1 ;
-    border-style: solid;
     text-align: left;
-    
+    text-indent: 13%;
+    flex: 3;
+    font-size: 1.5em;
+    text-transform: capitalize;
 }
 
-.flex-container {
-    border-style: solid;
+input.head {
+    flex: 1;
+    text-align: left;
+}
+
+.flexContainer {
+    border-left-style: solid;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-width: 1em;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border-color: #F9C80E;
     display: flex;
     flex-wrap: wrap;
-    background-color: deepskyblue;
+    /*    background-color: deepskyblue;*/
     width: 70%;
     justify-content: center;
     align-items: center;
-
     flex: 1 1 auto;
     overflow-y: auto;
-    height: 60vh;
+    height: 54vh;
 }
 
-.flex-container>button {
-    background-color: #f1f1f1;
+
+.flexContainer button {
     width: 150px;
     height: 150px;
     margin: 10px;
@@ -304,4 +371,8 @@ input.head {
     font-size: 1.5em;
 }
 
+
+.footer {
+    height: 6vh;
+}
 /* cv_base_ingred slutar*/

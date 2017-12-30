@@ -188,6 +188,7 @@ var vm = new Vue({
         showCatButtons: false,
         showIngredientsButtons: false,
         showCartPage: false,
+        showFooter: true,
         chosenCatName: '',
         searchTerm: ''
 
@@ -206,6 +207,7 @@ var vm = new Vue({
             this.showSmoothieMug = false;
             this.showIngredientsButtons = false;
             this.showCartPage = false;
+            this.showFooter = true;
         },
         
     //The function that is activated when "cart" is pressed    

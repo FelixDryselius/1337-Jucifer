@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8"/>
         <link rel="stylesheet" href="css/cv_css.css">
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
         <script src="/vue/vue.js"></script>
         <script src="/socket.io/socket.io.js" defer></script>
         <script src="js/juicifer-main.js" defer></script>
@@ -57,7 +58,7 @@
 
                 <!--Buttons to abort and get help-->
                 <div class="helpAbortContainer" v-if="showHelpAbortContainer">
-                    <button>
+                    <button id="abort">
                         <a onclick="document.getElementById('confirmAbort').style.display='block';
                                     document.getElementById('fade').style.display='block'"> 
                             Avbryt beställning
@@ -85,21 +86,18 @@
             <div id="start" v-if="showStartPage">
                 <main>
                     <h1 class="header">Välkommen till Jucifer</h1>
-                    <h2 class="subHeader"> Välj din dryck:</h2>
+                    <h2 class="subHeader"> Välj din dryck</h2>
 
                     <div class="startPageButtonContainer">
-                        <div class="chooseDrinkTypeButton">
+                        <div class="largeButton">
                             <button id="juiceButton" type="button" v-on:click="showTab('sizePage'); addType('juice')">Juice</button>
                         </div>
 
-                        <div class="chooseDrinkTypeButton">
+                        <div class="largeButton">
                             <button id="smoothieButton" type="button" v-on:click="showTab('sizePage'); addType('smoothie')">Smoothie</button>
                         </div>      
                     </div>
                 </main>
-                <footer class="footer">
-                    <p>&copy;1337-Leet Force</p>
-                </footer>
             </div>
 
             <!--End of start page-->
@@ -110,21 +108,18 @@
                     <h1 class="header">Välj en storlek</h1>
 
                     <div class="buttonSizeContainer">
-                        <div class="chooseSizeButton">
+                        <div class="largeButton">
                             <button id="smallButton" type="button" v-on:click="showTab('ingredPage')">Small</button>
                         </div>
-                        <div class="chooseSizeButton">
+                        <div class="largeButton">
                             <button id="mediumButton" type="button" v-on:click="showTab('ingredPage')">Medium</button>
                         </div>  
 
-                        <div class="chooseSizeButton">
+                        <div class="largeButton">
                             <button id="largeButton" type="button" v-on:click="showTab('ingredPage')">Large</button>
                         </div>
                     </div>
                 </main>
-                <footer class="footer">
-                    <p>&copy;1337-Leet Force</p>
-                </footer>
             </div>
             <!--End of size page-->
 
@@ -143,7 +138,7 @@
                             <input class="head" placeholder="Search" v-model="searchTerm">
                         </div>
 
-                        <div class="flex-container">
+                        <div class="flexContainer">
                             <button class="chooseIngredientsButton" v-on:click="closeIngredMenus()">
                                 Return</button>
                             <button class="chooseIngredientsButton" v-on:click="choosePreMadeDrinks()">
@@ -154,7 +149,6 @@
                                 {{catName}}</button>
 
                             <ingredient
-
                                         ref="ingredient"
                                         v-if="showIngredientsButtons"
                                         v-for="item in filtered_ingredients(chosenCatName).filter(searched_ingredients)"
@@ -162,7 +156,6 @@
                                         :item="item" 
                                         :lang="lang"
                                         :key="item.ingredient_id"> 
-
                             </ingredient>
                         </div>
                     </div>
@@ -174,17 +167,16 @@
                         <div class="mugContainer">
                             <div class="mug">
                                 <div class="toppingButton">
-                                    <button id="topping"  v-on:click="showIngredients">Topping</button>
+                                    <button id="topping"  v-on:click="showIngredients"><span>Topping</span></button>
                                 </div>
                                 <div class="mugButtons">
-                                    <button id="ingredient3" v-on:click="showIngredients('ingredCat')">Ingredient 3</button>
-                                    <br>
-                                    <button id="ingredient2" v-on:click="showIngredients('ingredCat')">Ingredient 2</button>
-                                    <br>
-                                    <button id="ingredient1" v-on:click="showIngredients('ingredCat')">Ingredient 1</button>
-                                    <br>
-                                    <button id="base" v-on:click="showIngredients('base')">base
-                                    </button> 
+                                    <div class="ingred">
+                                        <div class="ingredButton" id="ingred3" v-on:click="showIngredients('ingredCat')"><span>Ingredient 3</span></div>
+                                        <div class="ingredButton" id="ingred2" v-on:click="showIngredients('ingredCat')"><span>Ingredient 2</span></div>
+                                        <div class="ingredButton" id="ingred1" v-on:click="showIngredients('ingredCat')"><span>Ingredient 1</span></div>
+                                    </div>
+                                    <div class="ingredButton" id="baseIngred" v-on:click="showIngredients('base')"><span>base</span>
+                                    </div> 
                                 </div>
                             </div>
                         </div>
@@ -266,9 +258,7 @@ document.getElementById('fade').style.display='block'">
                 </div>    
             </div><!--End of cart page--> 
 
-
-
-
+            <footer class="footer" v-if="showFooter"></footer>
 
         </div>
     </body>
