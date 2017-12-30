@@ -239,6 +239,10 @@ button {
     margin-bottom: 0.2em;
 }
 
+.ingredButtonJuice {
+    margin-bottom: -0.8em;
+}
+
 #topping {
     color: black;
     font-size: 1em;
@@ -250,19 +254,34 @@ button {
     background-color: lightgray;
 }
 
-#ingred3 {
+#ingred5 {
     width: 13.5em;
 }
 
-#ingred2 {
+#ingred4 {
     width: 12.2em;
     left: 4.25%;
 }
 
-#ingred1 {
+#ingred3 {
     width: 11em;
     margin-bottom: -0.2em;
     left: 8.4%;
+}
+
+#juiceIngred3 {
+    width: 11em;
+    left: 8.4%;
+}
+
+#ingred2 {
+    width: 9.8em;
+    left: 13%;
+}
+
+#ingred1 {
+    width: 8.6em;
+    left: 17%;
 }
 
 #baseIngred {
@@ -282,6 +301,10 @@ button {
 .ingred span { 
     top: -2.5em;
     left: 28%;
+}
+
+#ingredJuice {
+    margin-bottom: 1em;
 }
 
 /*End css for smoothie choose ingredients */
