@@ -1,60 +1,27 @@
-/*Container for css related to topbarcontainer */
 
 
-
-/*Start på css för start page*/
+/*Start - css för alla sidor*/
 
 html {
     font-family: 'Lato', sans-serif;
 }
 
 html button {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Lato', sans-serif; /*Hittar inte font i button om jag inte specificerar av någon anledning*/
 }
 
-.header{
-    text-align: center;
-    position: relative;
-    font-size: 3em;
-}
-.subHeader {
-    text-align: center;
-    position: relative;
-    margin-top: 2.5em;
-    font-size: 2em;
+button {
+    background-color: #49c0f0;
+    color: #E6EAEF;
+    border-radius: 6px;
+    border-width: 0;
+    box-shadow: 0 -2px 0 0 rgba(0, 0, 0, 0.3) inset;
 }
 
-.helpLangContainer {
-    display: flex;
-    justify-content: space-between;
-    position: absolute;
-    top:1em;
-    right: 1em; 
-    width: 6vw;
-}
-/*Går det att ärva från andra klasser?*/
-.helpAbortContainer {
-    display: flex;
-    justify-content: space-between;
-    position: absolute;
-    top:1em;
-    right: 1em; 
-    width: 13vw;
-}
+/*Slut - css för alla sidor*/
 
-#abort {
-    background-color: #EA3546;
-}
 
-#langButton{
-    width: 2.5em;
-    height: 2.5em;
-}
-
-#helpButton{
-    width: 2em;
-    height: 2em;
-}
+/*Start - Hjälpsida popup*/
 
 .blackOverlay {
     display: none;
@@ -99,20 +66,67 @@ html button {
     cursor: pointer;
 }
 
+/*Slut - hjälpsida*/
+
+
+/*Start - Språk och hjälpknappar startsida*/
+
+.helpLangContainer {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top:1em;
+    right: 1em; 
+    width: 6vw;
+}
+
+.helpAbortContainer {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top:1em;
+    right: 1em; 
+    width: 13vw;
+}
+
+#abort {
+    background-color: #EA3546;
+}
+
+#langButton{
+    width: 2.5em;
+    height: 2.5em;
+}
+
+#helpButton{
+    width: 2em;
+    height: 2em;
+}
+
+/*Slut - språk och hjälpknappar startsida*/
+
+
+/*Start - Start page*/
+
+.header {
+    text-align: center;
+    position: relative;
+    font-size: 3em;
+}
+
+.subHeader {
+    text-align: center;
+    position: relative;
+    margin-top: 2.5em;
+    font-size: 2em;
+}
+
 .startPageButtonContainer{
     text-align: center;
     margin-top: 3.5em;
     margin-bottom: 9em;
     width: 100%;
 }   
-
-button {
-    background-color: #49c0f0;
-    color: #E6EAEF;
-    border-radius: 6px;
-    border-width: 0;
-    box-shadow: 0 -2px 0 0 rgba(0, 0, 0, 0.3) inset;
-}
 
 .largeButton{
     display: inline-block;
@@ -127,39 +141,10 @@ button {
     width: 7em;
 }
 
-.footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-}
+/*Slut - Start page*/
 
-/* Slut på css för start page*/
-/*cv_add_drink_page startar*/
-.topBarContainer{
-    text-align: center;
-    height: 3em;
-    width: 100%;
-}
-.topBarButton{
-    display: inline-block;
-    margin-top: .5em;
-    margin-bottom; .5em;
-    display: inline-block;
-}
-.topBarButton button{
-    background-color: lightgrey;
-    color: black;
-    height: 2em;
-    width: 10em;
-}
-.abortButton button{
-    height: 2em;
-    width: 2em;
-}
-/*cv_add_drink_page slutar*/
-/* Start på css for choose size page*/
+
+/*Start - Choose size page*/
 
 #size main {
     margin-top: 5em;
@@ -187,17 +172,37 @@ button {
     width: 10em;
 }
 
+/*Slut - Choose size page*/
 
-/*Start css for smoothie choose ingredients */
 
+/*Start - Topbar*/
 
-.mainContent {
-    display: flex;
-    align-content: center;
-    height: 65vh;
-    justify-content: flex-end;
-    align-items: center;
+.topBarContainer{
+    text-align: center;
+    height: 3em;
+    width: 100%;
 }
+.topBarButton{
+    display: inline-block;
+    margin-top: .5em;
+    margin-bottom; .5em;
+    display: inline-block;
+}
+.topBarButton button{
+    background-color: lightgrey;
+    color: black;
+    height: 2em;
+    width: 10em;
+}
+.abortButton button{
+    height: 2em;
+    width: 2em;
+}
+
+/*Slut - Topbar*/
+
+
+/*Start - Mug*/
 
 .mugContainer {
     display: flex;
@@ -309,8 +314,11 @@ button {
     margin-bottom: 1em;
 }
 
-/*End css for smoothie choose ingredients */
-/* cv_cart_page börjar*/
+/*Slut - Mug*/
+
+
+/*Start - Cart page*/
+
 .cartBox{
     display: flex;
     flex: 1;
@@ -346,9 +354,19 @@ button {
 #payButtonGreen {
     background-color: #6EEB83;
 }
-/* cv_cart_page slutar*/
 
-/* cv_base_ingred börjar*/
+/*Slut - Cart page*/
+
+
+/*Start - ingred box*/
+
+.mainContent {
+    display: flex;
+    align-content: center;
+    height: 65vh;
+    justify-content: flex-end;
+    align-items: center;
+}
 
 .headContainer{
     display: flex; 
@@ -407,8 +425,17 @@ input.head {
     font-size: 1.5em;
 }
 
+/*Slut - ingred box*/
+
+
+/*Start - footer*/
 
 .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
     height: 6vh;
+    text-align: center;
 }
-/* cv_base_ingred slutar*/
+/*Slut - footer*/
