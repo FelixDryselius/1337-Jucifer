@@ -327,7 +327,7 @@ button {
     border-style: solid;
     border-width: 1em;
     border-radius: 6px;
-    border-color: #F9C80E;
+    border-color: #2A628F;
     overflow: auto;
     align-self: stretch;
 }
@@ -337,7 +337,7 @@ button {
     border-style: solid;
     border-width: 1em;
     border-radius: 6px;
-    border-color: #F9C80E;
+    border-color: #2A628F;
     align-content: center;
     overflow: auto;
     align-self: stretch;
@@ -353,7 +353,7 @@ button {
 .headContainer{
     display: flex; 
     justify-content: space-evenly;
-    width: 70%;
+    width: 65%;
     flex-direction: row;
     border-left-style: solid;
     border-right-style: solid;
@@ -361,7 +361,8 @@ button {
     border-width: 1em;
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
-    border-color: #F9C80E;
+    border-color: #2A628F;
+    margin-left: 3em;
 }
 
 .head {
@@ -382,16 +383,18 @@ input.head {
     border-width: 1em;
     border-bottom-left-radius: 6px;
     border-bottom-right-radius: 6px;
-    border-color: #F9C80E;
+    border-color: #2A628F;
+    background-color: lightgrey;
     display: flex;
     flex-wrap: wrap;
     /*    background-color: deepskyblue;*/
-    width: 70%;
+    width: 65%;
     justify-content: center;
     align-items: center;
     flex: 1 1 auto;
     overflow-y: auto;
     height: 54vh;
+    margin-left: 3em;
 }
 
 
